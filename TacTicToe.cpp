@@ -4,10 +4,11 @@
 
 #include <stdio.h>
 #include <stdlib.h>
-
+#include <time.h>
 
 int main()
 {
+	srand((int) time(0));
 	char space[10] = { ' ',' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ' };
 	int num;
 	char symbol;
