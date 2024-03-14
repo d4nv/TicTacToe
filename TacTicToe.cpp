@@ -38,7 +38,7 @@ int main()
 	printf("--------TIC TAC TOE-------\n");
 	printf("--------------------------\n");
 
-	//Printed the layout of the game table.
+	//Printed the layout of the grid
 
 	printf(" 1 | 2 | 3 \n");
 	printf("_________\n");
@@ -49,7 +49,7 @@ int main()
 	for (int i = 0; i < 5; i++)
 	{
 
-		//Asking user to define the square number is wanted to play.
+		//Asking the player which grid to play in
 		printf("Please enter the square number you want to play: \n");
 		scanf_s("%d", &num);
 
