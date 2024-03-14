@@ -49,6 +49,7 @@ int main()
 
 	for (int i = 0; i < 5; i++)
 	{
+		
 
 		//Asking the player which grid to play in
 		printf("Please enter the square number you want to play: \n");
@@ -124,6 +125,11 @@ int main()
 		if(i == 20)
 		{
 			break;
+		}else if(i == 4)
+		{
+			printf("========\n");
+       	 	printf("ITS DRAW!\n");
+			printf("========\n\n\n");
 		}
 	
 
