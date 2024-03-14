@@ -17,6 +17,7 @@ int main()
 	char symbol;
 	char symbolpc;
 	int r2;
+	int winner;
 
 	//Winning condition is defined with using 2 dimension array.
 		int youwin[8][3] = {
@@ -27,8 +28,7 @@ int main()
     	{2, 5, 8}, 
     	{3, 6, 9}, 
     	{1, 5, 9}, 
-    	{3, 5, 7}  
-	};
+    	{3, 5, 7}
 
 	int counter;
 	
@@ -197,7 +197,7 @@ int main()
        	 	printf("PC won!\n");
 			printf("========\n\n\n");
 
-			//Displaying the current game table
+			//Displaying the current game table................
 
 			printf(" %c | %c | %c \n", space[1], space[2], space[3]);
 			printf("_________\n");
