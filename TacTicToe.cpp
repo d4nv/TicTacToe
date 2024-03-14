@@ -17,7 +17,6 @@ int main()
 	char symbol;
 	char symbolpc;
 	int r2;
-	int winner;
 
 	//Winning condition is defined with using 2 dimension array.
 		int youwin[8][3] = {
