@@ -8,14 +8,18 @@
 
 int main()
 {
+
+	// Defined srand for using different random numbers every time running the code.
 	srand((int) time(0));
 	char space[10] = { ' ',' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ' };
+	// Space array is defined for square spaces on game table. 
 	int num;
 	char symbol;
 	char symbolpc;
 	int r2;
 	int winner;
 
+	//Winning condition is defined with using 2 dimension array.
 		int youwin[8][3] = {
     	{1, 2, 3}, 
    		{4, 5, 6}, 
@@ -34,6 +38,8 @@ int main()
 	printf("--------TIC TAC TOE-------\n");
 	printf("--------------------------\n");
 
+	//Printed the layout of the game table.
+
 	printf(" 1 | 2 | 3 \n");
 	printf("_________\n");
 	printf(" 4 | 5 | 6 \n");
@@ -43,6 +49,7 @@ int main()
 	for (int i = 0; i < 5; i++)
 	{
 
+		//Asking user to define the square number is wanted to play.
 		printf("Please enter the square number you want to play: \n");
 		scanf_s("%d", &num);
 
@@ -52,6 +59,8 @@ int main()
 		char x = 'X';
 		char o = 'O';
 
+
+		//According to desired symbol and number if statement puts the right symbol on right square number.
 		if (symbol == 'X' || symbol == 'x')
 		{
 			space[num] = 'X';
@@ -63,7 +72,7 @@ int main()
 		}
 
 
-
+	//Loop is checking if the winning conditions are met yet
 	for (counter = 0; counter < 8; counter++)
  	{
    	 if (	space[youwin[counter][0]] == 'X' &&
@@ -74,12 +83,15 @@ int main()
        	 	printf("You won!\n");
 			printf("========\n\n\n");
 
+			//Displaying the current game table
+
 			printf(" %c | %c | %c \n", space[1], space[2], space[3]);
 			printf("_________\n");
 			printf(" %c | %c | %c \n", space[4], space[5], space[6]);
 			printf("_________\n");
 			printf(" %c | %c | %c \n\n", space[7], space[8], space[9]);	
 
+		// If the condition is met i = 20 to end the loop(game).
 			i = 20;
         	
     	}
@@ -92,6 +104,7 @@ int main()
        	 	printf("You won!\n");
 			printf("========\n\n\n");
 
+			//Displaying the current game table
 			printf(" %c | %c | %c \n", space[1], space[2], space[3]);
 			printf("_________\n");
 			printf(" %c | %c | %c \n", space[4], space[5], space[6]);
@@ -99,20 +112,26 @@ int main()
 			printf(" %c | %c | %c \n\n", space[7], space[8], space[9]);	
 
 			
-
+		// If the condition is met i = 20 to end the loop(game).
 			i = 20;
 
     	}
 	}
 
+
+	// If condition checks if the player won the game or not.
 		if(i == 20)
 		{
 			break;
 		}
 	
 
+
+	// PC picks a random number on the table to play.
 		int pcnum = rand() % 9 + 1;
 
+
+	// If the number that pc picked is already been played, it randoms the number until finds a empty spot.
 		for(int c = 1 ; c <= 9; c++)
 		{
 			if(space[pcnum] == 'X' || space[pcnum] == 'O')
@@ -121,7 +140,7 @@ int main()
 			}
 		}
 		
-
+	// a new random integer to make the symbol random.
 		int r2 = rand() % 500;
 
 		if(r2 % 2 == 1)
@@ -159,6 +178,8 @@ int main()
        	 	printf("PC won!\n");
 			printf("========\n\n\n");
 
+			//Displaying the current game table
+
 			printf(" %c | %c | %c \n", space[1], space[2], space[3]);
 			printf("_________\n");
 			printf(" %c | %c | %c \n", space[4], space[5], space[6]);
@@ -177,6 +198,7 @@ int main()
        	 	printf("PC won!\n");
 			printf("========\n\n\n");
 
+			//Displaying the current game table
 
 			printf(" %c | %c | %c \n", space[1], space[2], space[3]);
 			printf("_________\n");
@@ -189,6 +211,7 @@ int main()
     	}
 	}
 
+		// If condition checks if the PC won the game or not.
 		if(i == 20)
 		{
 			break;
