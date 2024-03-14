@@ -29,6 +29,8 @@ int main()
     	{3, 6, 9}, 
     	{1, 5, 9}, 
     	{3, 5, 7}
+		
+		};
 
 	int counter;
 	
@@ -231,3 +233,4 @@ int main()
 
 return 0;
 }
+
